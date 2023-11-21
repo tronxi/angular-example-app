@@ -1,0 +1,6 @@
+<button routerLink="/home/counter">Contador</button>
+<p>Pokemons</p>
+<input type="text" placeholder="Filtrar"  (keyup)="onFilter($event)"/>
+<div *ngFor="let pokemon of filteredPokemonList ">
+  <app-pokemon [pokemon]="pokemon" [handleClick]="onClick.bind(this, pokemon)"></app-pokemon>
+</div>

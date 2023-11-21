@@ -1,0 +1,8 @@
+<nav>Cosas comunes</nav>
+<button routerLink="/">Volver</button>
+<span *ngIf="(pokemonState$ | async ) as pokemonModel">
+  <app-pokemon-selected [pokemon]="pokemonModel"></app-pokemon-selected>
+</span>
+
+<router-outlet></router-outlet>
+
